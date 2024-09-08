@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mahir BazarBD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/logo3.png" type="image/x-icon"> 
+</head>
+
+
+<body class="font-sans antialiased">
+
+    <!-- Header Section -->
+
+    <header id="header" class="bg-white shadow-lg">
+        <nav class="container mx-auto py-4">
+
+            <!-- Mobile Layout (M, L): Center Logo and Menu Items in Grid -->
+            <div class="grid grid-cols-1 text-center md:flex md:justify-between md:items-center">
+                <!-- Logo -->
+                <div class="text-2xl font-bold mb-4 md:mb-2 lg:text-3xl lg:mb-2">
+                    <a href="./index.html" class="flex justify-center md:justify-start items-center">
+                        <img src="./Images/logo3.png" alt="logo" class="h-8 px-4 lg:h-16"> 
+                        <span>Mahir BazarBD</span>
+                    </a>
+                </div>
+    
+                <!-- Menu Items -->
+                <ul class="flex justify-center font-semibold md:pr-6 space-x-3 text-md flex-wrap md:space-x-6 md:text-lg md:flex md:space-x-6">
+                    <li><a href="./index.html" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="./index.html#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="./index.html#categories" class="hover:text-blue-600">Categories</a></li>
+                    <li><a href="./product.html" class="hover:text-blue-600">Shop</a></li>
+                    <li><a href="./blog.html" class="hover:text-blue-600">Blog</a></li>
+                    <li><a href="./contact.html" class="hover:text-blue-600">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+ <!-- Cart Section -->
+<section id="cart" class="container mx-auto my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- Selected Product Quantity -->
+    <div class="bg-lime-50 p-4 mx-4 shadow-lg">
+        <h3 class="text-2xl font-bold mb-4">Your Cart</h3>
+        <div class="flex justify-between items-center">
+            <span>Selected Product Quantity</span>
+            <span id="selected-quantity">0</span>
+        </div>
+    </div>
+
+
+    <!-- Total Price -->
+
+
+    <div class="bg-lime-50 p-4 pt-6 shadow-lg mx-4">
+        <div class="flex justify-between">
+            <h3 class="text-xl font-bold">Total Price</h3>
+            <p class="text-xl font-semibold">$<span id="total-price">0.00</span></p>
+        </div>
+        <div class="flex items-center justify-end">
+            <button id="checkout-button" class="bg-green-600 text-white px-4 py-2 mt-4">Checkout</button>
+        </div>
+    </div>
+    
+    <!-- Popup Modal for Total price -->
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-25 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <p class="text-2xl font-semibold">Coming Soon</p>
+            <button id="modal-close-button" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg">Okay</button>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+    <!-- Product Description Section -->
+<section id="product-description" class="m-6">
+    
+    <!-- Product Image -->
+    <div class="p-4 grid md:items-center md:justify-center">
+        <img id="product-image" src="./Images/CandleHolder.jpeg" alt="Product Image" class="w-full h-auto rounded-lg shadow-lg md:w-[650px]">
+    </div>
+
+    <!-- Product Info -->
+    <div class="bg-white p-4">
+        <div class="grid justify-between items-center mb-4">
+            <p id="product-description-text" class="mb-6">This elegant Metal Candle Holder is a perfect blend of modern design and timeless craftsmanship...</p>
+            <h3 id="product-title" class="text-3xl font-bold">Metal Candle Holder</h3>
+        </div>
+        <div class="flex items-center justify-between">
+            <p id="product-price" class="text-xl font-semibold">$120.00</p>
+            <button id="purchase-button" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold">Purchase It</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Products Section -->
+<section id="products" class="pt-8 pb-12 bg-gray-200">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8 text-blue-800">Our Products</h2>
+        <div class="mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Product Card -->
+            
+                    <!-- product-1 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="This elegant Metal Candle Holder is a perfect blend of modern design and timeless craftsmanship, adding sophistication to any space. Made from durable, high-quality metal, it features a sleek, minimalist look that complements both contemporary and traditional decor. Ideal for creating a warm, ambient glow, this candle holder is perfect for dinner tables, mantels, or as a centerpiece for special occasions. Its sturdy construction ensures stability while holding a variety of candle sizes. Whether used for everyday decor or special events, it adds a touch of elegance to any room.">
+                <img src="./Images/CandleHolder.jpeg" alt="Metal Candle Holder" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Metal Candle Holder</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $99.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-2 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The Microfiber Floor Mop is designed for efficient and easy cleaning. Its microfiber head effectively captures dust, dirt, and spills on various floor types. With a lightweight, adjustable handle and a washable mop pad, it's eco-friendly and ideal for hardwood, tile, and laminate surfaces, leaving floors spotless.">
+                <img src="./Images/mop.jpg" alt="Microfiber Floor Mop" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Microfiber Floor Mop</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $90.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-3 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The Robotic Pet Puppy is an interactive, lifelike toy designed to mimic the behaviors of a real puppy. It responds to touch, sound, and motion, providing companionship without the hassle of care. Ideal for children and adults alike, it offers playful barks, movements, and affectionate gestures, creating a joyful experience.">
+                <img src="./Images/RoboticPet.jpg" alt="Robotic Pet Puppy" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Robotic Pet Puppy</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $49.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-4 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The Phone Case for iPhone offers premium protection with a sleek design. Made from durable materials, it shields your phone from scratches, drops, and everyday wear. The case is lightweight, fits snugly, and provides easy access to all buttons and ports. Stylish and functional, it's perfect for iPhone users seeking both protection and elegance.">
+                <img src="./Images/PhoneCase.jpeg" alt="Phone Case For iPhone" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Phone Case For iPhone</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $39.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-5 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The Waterproof Smartwatch combines cutting-edge technology with durability, designed to withstand water exposure up to specific depths. Ideal for fitness enthusiasts, it tracks activities like swimming, running, and heart rate monitoring. With notifications, GPS, and a sleek design, this smartwatch offers both style and functionality for active lifestyles.">
+                <img src="./Images/SmartWatch.jpeg" alt="Waterproof Smartwatch" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Waterproof Smartwatch</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $80.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-6 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="Casual Men's Shoes offer a perfect blend of comfort and style for everyday wear. Crafted from breathable materials, these shoes provide all-day support with a cushioned sole and flexible design. Suitable for both casual outings and semi-formal occasions, they combine fashion and function, making them a versatile wardrobe staple.">
+                <img src="./Images/Shoes.jpeg" alt="Casual Mens Shoes" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Casual Mens Shoes</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $60.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-7 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The 16TB Flash Drive offers massive storage capacity in a compact design, perfect for storing large files, videos, and extensive data collections. With high-speed data transfer capabilities, it ensures quick access and backups of your important files. Ideal for professionals and everyday users, this portable device combines convenience with reliability.">
+                <img src="./Images/flashDrive.jpeg" alt="16TB Flash Drives" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">16TB Flash Drives</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $50.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-8 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="The Decorative Table Lamp adds a touch of elegance and warmth to any room. With its stylish design, it enhances both modern and traditional decor. Ideal for living rooms, bedrooms, or offices, this lamp provides soft, ambient lighting, creating a cozy atmosphere while serving as a beautiful accent piece.">
+                <img src="./Images/tableLamp.jpeg" alt="Decorative Table Lamp" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Decorative Table Lamp</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $40.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>
+            </div>
+
+                    <!-- product-9 -->
+            <div class="product-card bg-white p-6 rounded-lg shadow-lg" data-description="Wireless Headphones deliver superior sound quality and convenience with their cordless design. Ideal for music lovers and frequent travelers, they offer comfortable, noise-canceling ear cups and long-lasting battery life. With Bluetooth connectivity, you can enjoy seamless audio experiences without the hassle of tangled wires, making them perfect for any activity.">
+                <img src="./Images/Headphone.jpeg" alt="Wireless Headphones" class="w-full h-48 object-cover mb-4">
+                <h3 class="product-title text-xl font-semibold mb-2">Wireless Headphones</h3>
+                <div class="flex items-center justify-between">
+                    <p class="product-price text-lg text-gray-700 mb-4"><span>Price:</span> $20.99</p>
+                    <button class="buy-now bg-blue-600 px-6 py-2 rounded text-white hover:bg-blue-700">Buy Now</button>
+                </div>                
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- Subscribe Section -->
+    <section id="subscribe" class="py-16 bg-blue-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Subscribe to Our Newsletter</h2>
+            <p class="text-lg mb-4">Get updates on our latest products and offers.</p>
+            <form action="#" method="POST" class="flex justify-center">
+                <input type="email" placeholder="Enter your email" class="px-4 py-3 w-1/3 rounded-l-lg text-gray-500">
+                <button type="submit" class="bg-green-600 px-6 py-3 rounded-r-lg hover:bg-green-700">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    
+    <footer id="footer" class="py-8 bg-gray-800 text-white">
+        <div class="container mx-auto text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="flex items-center justify-center">
+                    
+                    <a href="./index.html"><img class="w-28 h-auto" src="./Images/logo.png" alt="logo"></a>
+
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="./index.html" class="hover:text-gray-400">Home</a></li>
+                        <li><a href="./product.html" class="hover:text-gray-400">Shop</a></li>
+                        <li><a href="./blog.html" class="hover:text-gray-400">Blog</a></li>
+                        <li><a href="./contact.html" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+                    <ul>
+                        <li>Bhaluka, Mymensingh</li>
+                        <li>Cell: +88 017 47 02 47 03</li>
+                        <li>support@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/engrapple" target="_blank" class="hover:text-gray-400">Facebook</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Instagram</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Twitter</a></li>
+                        <li><a href="#" class="hover:text-gray-400">Youtube</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <p class="text-sm">&copy 2024 Mahir BazarBD. All Rights Reserved. <br> Design & Developed By <samp class="text-yellow-600 font-semibold">APPLE MAHMUD</samp> @ MERN N242-1.</p>
+        </div>
+    </footer>
+
+    <script src="./js/product.js"></script>
+
+</body>
+</html>
